@@ -2,4 +2,6 @@ set guifont=Source_Code_Pro:h11:cANSI
 
 " color scheme of the moment:
 syntax on
-colorscheme darkblue
+set background=dark
+colorscheme solarized
+

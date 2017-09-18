@@ -72,7 +72,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'shougo/denite.nvim'
 Plugin 'scrooloose/syntastic'
 Plugin 'valloric/youcompleteme'
-
+Plugin 'altercation/vim-colors-solarized'
 
 
 
@@ -98,7 +98,7 @@ let g:indent_guides_enable_on_vim_startup = 1
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 0
-let g:airline_theme='hybrid'
+"let g:airline_theme='hybrid'
 "let g:airline#extensions#whitespace#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
 set laststatus=2
