@@ -1,6 +1,5 @@
-#ignore the main and tmp directories
+#ignore the main directory
 vim80/
-tmp/
 #ignore the temp files
 *.un
 *~

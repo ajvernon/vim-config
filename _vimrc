@@ -56,20 +56,16 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
-Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'stanangeloff/php.vim'
 Plugin 'nono/jquery.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'elzr/vim-json'
 Plugin 'othree/html5.vim'
-Plugin 'james9909/stackanswers.vim'
-Plugin 'vimwiki/vimwiki'
 Plugin 'roman/golden-ratio'
 Plugin 'juneedahamed/vc.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'shougo/denite.nvim'
 Plugin 'scrooloose/syntastic'
 Plugin 'valloric/youcompleteme'
 Plugin 'altercation/vim-colors-solarized'
@@ -92,12 +88,8 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-set backupdir=~/tmp
-
 let g:vc_trunk_url = "https://osldev.osl.local:8443/svn/Development/trunk/stylemanwms/html"
 autocmd BufEnter * silent! lcd %:p:h
-
-let g:indent_guides_enable_on_vim_startup = 1
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 0
