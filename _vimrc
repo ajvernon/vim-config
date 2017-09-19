@@ -110,7 +110,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-let g:syntastic_php_checkers = ['php', 'php-cs']
+let g:syntastic_php_checkers = ['phpcs', 'php']
 let g:syntastic_javascript_checkers = ['jshint','jsl']
 
 let g:signify_vcs_list = ['git', 'svn']
