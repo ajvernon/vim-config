@@ -1,0 +1,6 @@
+#ignore the main directory
+vim80/
+#ignore the temp files
+*.un
+*~
+*.swp
