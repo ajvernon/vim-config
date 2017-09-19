@@ -74,7 +74,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'valloric/youcompleteme'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'mhinz/vim-signify'
-
+Plugin 'chrisbra/unicode.vim'
 
 
 " All of your Plugins must be added before the following line
