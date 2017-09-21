@@ -4,6 +4,14 @@ source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
 
+filetype plugin indent on
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
+
 "set diffexpr=MyDiff()
 "function MyDiff()
 "  let opt = '-a --binary '
@@ -72,7 +80,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'mhinz/vim-signify'
 Plugin 'chrisbra/unicode.vim'
 
-
+" Here's a 🏁 to annoy Fred
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
