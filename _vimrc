@@ -3,6 +3,7 @@ set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
+set backupcopy=yes
 
 filetype plugin indent on
 " show existing tab with 4 spaces width
@@ -79,6 +80,14 @@ Plugin 'valloric/youcompleteme'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'mhinz/vim-signify'
 Plugin 'chrisbra/unicode.vim'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
+Plugin 'majutsushi/tagbar'
+Plugin 'ternjs/tern_for_vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'sjl/gundo.vim'
+
 
 " Here's a 🏁 to annoy Fred
 " All of your Plugins must be added before the following line
@@ -96,7 +105,7 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-let g:vc_trunk_url = "https://osldev.osl.local:8443/svn/Development/trunk/stylemanwms/html"
+let g:vc_trunk_url = "svn://osldev/Development/trunk/"
 autocmd BufEnter * silent! lcd %:p:h
 
 let g:airline#extensions#tabline#enabled = 1
@@ -106,6 +115,7 @@ let g:airline_powerline_fonts = 0
 let g:airline#extensions#syntastic#enabled = 1
 set laststatus=2
 set number
+set mouse=a
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -113,6 +123,13 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_php_checkers = ['phpcs', 'php']
-let g:syntastic_javascript_checkers = ['jshint','jsl']
+let g:syntastic_javascript_checkers = ['eslint', 'jshint', 'jsl']
 
 let g:signify_vcs_list = ['git', 'svn']
+
+let g:easytags_cmd = 'c:/ctags'
+nmap <F8> :TagbarToggle<CR>
+nnoremap <F5> :GundoToggle<CR>
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
