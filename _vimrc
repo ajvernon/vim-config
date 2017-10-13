@@ -1,10 +1,34 @@
 set encoding=utf-8
+set fileformat=dos
 set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
 set backupcopy=yes
 
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
+" backups and other junky files
+set backupdir=~/.vim/backup     " get backups outta here
+set directory=~/.vim/swap       " get swapfiles outta here
+set writebackup                 " temp backup during write
+set undodir=~/.vim/undo         " persistent undo storage
+set undofile                    " persistent undo on
+
+" user interface
+set history=1000                " remember command mode history
+set lazyredraw                  " don't update screen inside macros, etc
+set matchtime=2                 " ms to show the matching paren for showmatch
+set ruler                       " show the cursor position all the time
+set showcmd                     " display incomplete commands
+set showmatch                   " show matching brackets while typing
+
+" regexes
+set incsearch                   " do incremental searching
+set gdefault	                " s///g by default
+
+"whitespace
 filetype plugin indent on
 " show existing tab with 4 spaces width
 set tabstop=4
@@ -12,6 +36,23 @@ set tabstop=4
 set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
+set shiftround                  " only indent to multiples of shiftwidth
+set smarttab                    " DTRT when shiftwidth/softtabstop diverge
+set autoindent                  " keep indenting on <CR>
+
+" miscellany
+set autoread                    " reload changed files
+set scrolloff=2                 " always have 2 lines of context on the screen
+set timeoutlen=1000             " wait 1s for mappings to finish
+
+"rebind
+" ctrl-arrow in normal mode to switch windows; overrides ctrl-left/right for
+" moving by words, but i tend to use those only in insert mode
+noremap <C-N> <C-W>s
+noremap <M-n> <C-W>v
+noremap <C-Left> <C-W><Left>
+noremap <C-Right> <C-W><Right>
+noremap = <C-W><C-W>
 
 "set diffexpr=MyDiff()
 "function MyDiff()
@@ -86,7 +127,6 @@ Plugin 'majutsushi/tagbar'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
-Plugin 'sjl/gundo.vim'
 
 
 " Here's a 🏁 to annoy Fred
@@ -129,7 +169,6 @@ let g:signify_vcs_list = ['git', 'svn']
 
 let g:easytags_cmd = 'c:/ctags'
 nmap <F8> :TagbarToggle<CR>
-nnoremap <F5> :GundoToggle<CR>
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
